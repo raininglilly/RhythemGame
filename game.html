@@ -2,5 +2,35 @@
 <html>
 <head>
 <title>Rhythem Game</title>
+<style>
+    canvas {
+        border: 2px;
+        background-color: lightblue;
+    }
+</style>
 </head>  
+<body>
+    <div id="canvas"></div>
+    <body onload="startGame()">
+        <h1>Rhythem Game</h1>
+        <script>
+            var canvasWidth = 600;
+            var canvasHeight = 400;
+
+            function startGame() {
+                gameCanvas.start();
+            }
+
+            var gameCanvas = {
+                canvas: document.createElement("canvas"),
+                start: function() {
+                    this.canvas.width = canvasWidth;
+                    this.canvas.Height = canvasHeight;
+                    this.context = this.canvas.getContext("2s");
+                    document.body.insertBefore(this.canvas.document.body.childNodes[0]);
+                }
+            }
+        </script>
+    </body>
+</body>
 </html>
