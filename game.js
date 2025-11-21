@@ -39,14 +39,21 @@ function createNote(width, height, y) {
         note.draw();
     }
 
-    //creates a stopNote function
+    //creates a drum function
+    function drum(width,height, y) {
+        this.width = width;
+        this.height = height;
+        this.y = y;
+    }
+
+    //creates a stopNote function. Stops the note and resets the canvas when the note hits the drum
     this.stopNote = function() {
         var noteEnd = canvasWidth - this.Height;
         if (this.x > noteEnd) {
             this.x = noteEnd;
         }
 
-        if (noteEnd){
+        if (noteEnd = drum){
             updateCanvas();
         }
     }
